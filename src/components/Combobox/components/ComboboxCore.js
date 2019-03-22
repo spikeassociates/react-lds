@@ -392,11 +392,10 @@ class ComboboxCore extends Component {
       renderListbox,
       selectedItems,
     } = this.props;
-    if (isOpen || selectedItems.length === 0) return null;
-
     const opts = this.getOpts();
 
     return renderListbox({
+      isOpen,
       label: labelListbox,
       makeSelectHandler: this.makeSelectHandler,
       selectedItems,
